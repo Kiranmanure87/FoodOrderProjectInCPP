@@ -78,7 +78,7 @@ void userlogin()
     cout << "Please enter PassWord: " << endl;
     cin >> password;
 
-    ifstream input("record.txt"); // reads from record file
+    ifstream input("record.txt"); 
     while (input >> id >> pass)
     {
         if (id == userid && pass == password)
@@ -101,7 +101,7 @@ void userlogin()
 
 void userregistor()
 {
-    string ruser, rpassword; //, rid, rpass;
+    string ruser, rpassword;
     system("cls");
     cout << "Please do Register! \n\n\n";
     cout << "\t Enter UserName: " << endl;
@@ -109,7 +109,7 @@ void userregistor()
     cout << "\t Enter Password: " << endl;
     cin >> rpassword;
 
-    ofstream f1("record.txt", ios::app); // open record file to write
+    ofstream f1("record.txt", ios::app); 
     f1 << ruser << ' ' << rpassword << endl;
     system("cls");
     cout << "\n\t\t\t Registration successful! \n";
@@ -190,7 +190,7 @@ void addfood()
         cin >> fPrice;
         cout << "Enter Food quantity: " << endl;
         cin >> fQuantity;
-        ofstream f9("record1.txt", ios::app); // Write in record1
+        ofstream f9("record1.txt", ios::app);
         f9 << SrNo << " " << fName << "       " << ':' << " " << fPrice << "Rs"
            << " " << fQuantity << "(items left)" << endl;
         cout << "Food Added Successfully...";
@@ -228,7 +228,7 @@ void selectfood()
     case 1:
     {
         string st;
-        ifstream f5("record1.txt"); // read from record1 and shows output
+        ifstream f5("record1.txt"); 
         while (f5.eof() == 0)
         {
             getline(f5, st);
